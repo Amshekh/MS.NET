@@ -1,0 +1,12 @@
+[uuid(F94D807C-75E7-4307-A7C4-39E4E30C926E), version(1.0), helpstring("App Plugin")]
+library AppPlugin
+{
+	importlib("stdole32.tlb");
+
+	[uuid(89BCFE25-8C89-4F12-9D8F-2254144BA553), object, oleautomation]
+	interface IHandleInput : IUnknown
+	{
+		HRESULT Action([in] BSTR input, [out, retval] LONG* result);
+	}
+
+};

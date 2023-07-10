@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d380e8fc-56df-4cc4-a32d-ef5f88db1c46" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1059/ToDService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ToDService.wsdl" MetadataType="Wsdl" ID="674be67b-ce45-4dc1-b3d6-b63b53a24d2d" SourceId="1" SourceUrl="http://localhost:1059/ToDService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ToDService.disco" MetadataType="Disco" ID="9c5350c8-95b9-4631-9c8c-43f666291f4a" SourceId="1" SourceUrl="http://localhost:1059/ToDService.svc?disco" />
+    <MetadataFile FileName="ToDService1.wsdl" MetadataType="Wsdl" ID="d659c4d9-4573-42c1-9021-e16d228f9a45" SourceId="1" SourceUrl="http://localhost:1059/ToDService.svc?wsdl" />
+    <MetadataFile FileName="ToDService.xsd" MetadataType="Schema" ID="87512b5f-1c77-4ac2-a7d7-1d84a2a0246c" SourceId="1" SourceUrl="http://localhost:1059/ToDService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ToDService1.xsd" MetadataType="Schema" ID="d5c7357f-b288-4918-9ad8-6a5be05a6b2e" SourceId="1" SourceUrl="http://localhost:1059/ToDService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

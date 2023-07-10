@@ -1,0 +1,28 @@
+<?XML version="1.0"?>
+<package>
+	<component>
+   		<registration progid="METNumerics.Euclid"/>
+
+   		<public>
+      			<method name="GCD"/>
+     			<method name="LCM"/>
+   		</public>
+
+   		<script language="JScript">
+      		    <![CDATA[
+      			function GCD(firstNum, secondNum){
+				if (secondNum == 0)
+					return firstNum;
+				return GCD(secondNum, firstNum % secondNum);
+      			}
+
+			function LCM(firstNum, secondNum){
+				var thirdNum = GCD(firstNum, secondNum);				
+				if(thirdNum == 0) return 0;
+				return firstNum * secondNum / thirdNum;			
+			}
+      		    ]]>
+   		</script>
+	</component>
+</package>
+

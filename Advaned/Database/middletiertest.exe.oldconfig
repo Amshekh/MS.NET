@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <system.serviceModel>
+        <bindings>
+            <netTcpBinding>
+                <binding name="OrderBinding" transactionFlow="true" />
+            </netTcpBinding>
+        </bindings>
+        <services>
+            <service name="Sales.OrderManager">
+                <endpoint address="net.tcp://0.0.0.0:2060/sales/order" binding="netTcpBinding"
+                    bindingConfiguration="OrderBinding" name="OrderEndpoint" contract="Sales.IOrderManager" />
+            </service>
+        </services>
+    </system.serviceModel>
+</configuration>

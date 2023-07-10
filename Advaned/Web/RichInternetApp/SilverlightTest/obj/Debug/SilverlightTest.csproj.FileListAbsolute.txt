@@ -1,0 +1,12 @@
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest\Bin\Debug\SilverlightTest.dll
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest\Bin\Debug\SilverlightTest.pdb
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest\Bin\Debug\AppManifest.xaml
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest\Bin\Debug\SilverlightTest.xap
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest\Bin\Debug\SilverlightTestTestPage.html
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest\obj\Debug\ResolveAssemblyReference.cache
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest\obj\Debug\App.g.i.cs
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest\obj\Debug\MainPage.g.i.cs
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest\obj\Debug\SilverlightTest.g.resources
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest\obj\Debug\SilverlightTest.dll
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest\obj\Debug\SilverlightTest.pdb
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest\obj\Debug\XapCacheFile.xml

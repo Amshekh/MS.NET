@@ -1,0 +1,13 @@
+.assembly Hello{}
+.assembly extern mscorlib{}
+
+.method public static void Run() cil managed	// here instead of run we can use any name  eg. Fun
+{
+
+	.entrypoint   // there can be only one entrypoint
+	.maxstack 1	//we can have any no. of registers for eg.24; so no limitation like rax,rdx etc. like thing.
+
+	ldstr	"Hello CIL"
+	call	void [mscorlib] System.Console::WriteLine(string)
+	ret
+}

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShopModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ShopEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Counters" EntityType="ShopModel.Counter" />
+    <EntitySet Name="Customers" EntityType="ShopModel.Customer" />
+    <EntitySet Name="OrderDetails" EntityType="ShopModel.OrderDetail" />
+    <EntitySet Name="Products" EntityType="ShopModel.Product" />
+    <AssociationSet Name="FK_OrderDetail_Customer" Association="ShopModel.FK_OrderDetail_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Product" Association="ShopModel.FK_OrderDetail_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Counter">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="CurrentValue" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="String" Nullable="false" MaxLength="8" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="8" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="24" Unicode="true" FixedLength="false" />
+    <Property Name="Credit" Type="Decimal" Precision="8" Scale="2" />
+    <NavigationProperty Name="OrderDetails" Relationship="ShopModel.FK_OrderDetail_Customer" FromRole="Customer" ToRole="OrderDetail" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderNo" />
+    </Key>
+    <Property Name="OrderNo" Type="Int32" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" />
+    <Property Name="CustomerId" Type="String" Nullable="false" MaxLength="8" Unicode="true" FixedLength="false" />
+    <Property Name="ProductNo" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Customer" Relationship="ShopModel.FK_OrderDetail_Customer" FromRole="OrderDetail" ToRole="Customer" />
+    <NavigationProperty Name="Product" Relationship="ShopModel.FK_OrderDetail_Product" FromRole="OrderDetail" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductNo" />
+    </Key>
+    <Property Name="ProductNo" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+    <Property Name="Stock" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="OrderDetails" Relationship="ShopModel.FK_OrderDetail_Product" FromRole="Product" ToRole="OrderDetail" />
+  </EntityType>
+  <Association Name="FK_OrderDetail_Customer">
+    <End Role="Customer" Type="ShopModel.Customer" Multiplicity="1" />
+    <End Role="OrderDetail" Type="ShopModel.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_Product">
+    <End Role="Product" Type="ShopModel.Product" Multiplicity="1" />
+    <End Role="OrderDetail" Type="ShopModel.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductNo" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="ProductNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

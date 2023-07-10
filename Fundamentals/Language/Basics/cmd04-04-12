@@ -1,0 +1,40 @@
+md MS.NET
+cd MS.NET
+md Fundamentals
+cd Fundamentals
+md Language
+cd Language
+notepad helloll.cil
+ilasm helloll.cil
+helloll
+ilasm helloll.cil
+helloll
+notepad hellohl.cs
+csc hellohl.cs
+dir
+hellohl
+ildasm hellohl.exe
+md Basics
+cd Basics
+cd ..
+np clitestapp.cs
+csc clitestapp.cs
+np clitestlib.cpp
+cl /LD clr:safe clitestlib.cpp
+cl /LD /clr:safe clitestlib.cpp
+clitestapp
+csc clitestapp.cs
+csc clitestapp.cs /r:clitestlib.dll
+clitestapp.exe
+cd Basics
+np valtypetest.cs
+csc valtypetest.cs
+valtypetest
+cp valtypetest.cs reftypetest.cs
+copy valtypetest.cs reftypetest.cs
+np reftypetest.cs
+csc reftypetest.cs
+reftypetest
+ildasm reftypetest.exe
+doskey /h cmd04-04-12
+doskey /h > cmd04-04-12

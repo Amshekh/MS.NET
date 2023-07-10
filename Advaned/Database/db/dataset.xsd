@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<xs:schema id="DBDataSet" xmlns="urn:DB" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:codegen="urn:schemas-microsoft-com:xml-msprop">
+  <xs:element name="DBDataSet" msdata:IsDataSet="true">
+
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+
+        <xs:element name="ATable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="key_field" type="xs:key-field-type" codegen:typedName="KeyField" />
+              <xs:element name="ValueField" type="xs:value-field-type" />
+              <xs:element name="CalculatedField" type="xs:calculated-field-type" msdata:Expression="an_expression" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:choice>
+    </xs:complexType>
+
+    <xs:unique name="ATablePK" msdata:PrimaryKey="true">
+      <xs:selector xpath="ATable" />
+      <xs:field xpath="key_field" />
+    </xs:unique>
+
+  </xs:element>
+</xs:schema>
+

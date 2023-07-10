@@ -1,0 +1,5 @@
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest.Web\bin\SilverlightTest.Web.dll
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest.Web\bin\SilverlightTest.Web.pdb
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest.Web\obj\Debug\ResolveAssemblyReference.cache
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest.Web\obj\Debug\SilverlightTest.Web.dll
+E:\MS.NET\Advaned\Web\RichInternetApp\SilverlightTest.Web\obj\Debug\SilverlightTest.Web.pdb

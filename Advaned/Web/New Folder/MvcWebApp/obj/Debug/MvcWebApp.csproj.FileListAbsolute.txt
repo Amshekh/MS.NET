@@ -1,0 +1,13 @@
+E:\MS.NET\Advanced\Web\MvcWebApp\bin\MvcWebApp.dll
+E:\MS.NET\Advanced\Web\MvcWebApp\bin\MvcWebApp.pdb
+E:\MS.NET\Advanced\Web\MvcWebApp\bin\EntityFramework.dll
+E:\MS.NET\Advanced\Web\MvcWebApp\bin\EntityFramework.xml
+E:\MS.NET\Advanced\Web\MvcWebApp\obj\Debug\ResolveAssemblyReference.cache
+E:\MS.NET\Advanced\Web\MvcWebApp\obj\Debug\MvcWebApp.dll
+E:\MS.NET\Advanced\Web\MvcWebApp\obj\Debug\MvcWebApp.pdb
+D:\Tutorials\study\Amits\ADSD\MS.NET_yw\Advaned\Web\New Folder\MvcWebApp\bin\MvcWebApp.dll
+D:\Tutorials\study\Amits\ADSD\MS.NET_yw\Advaned\Web\New Folder\MvcWebApp\bin\MvcWebApp.pdb
+D:\Tutorials\study\Amits\ADSD\MS.NET_yw\Advaned\Web\New Folder\MvcWebApp\bin\EntityFramework.xml
+D:\Tutorials\study\Amits\ADSD\MS.NET_yw\Advaned\Web\New Folder\MvcWebApp\obj\Debug\ResolveAssemblyReference.cache
+D:\Tutorials\study\Amits\ADSD\MS.NET_yw\Advaned\Web\New Folder\MvcWebApp\obj\Debug\MvcWebApp.dll
+D:\Tutorials\study\Amits\ADSD\MS.NET_yw\Advaned\Web\New Folder\MvcWebApp\obj\Debug\MvcWebApp.pdb

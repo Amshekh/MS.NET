@@ -1,0 +1,12 @@
+sn -k met.snk
+csc /keyfile:met.snk /t:library payroll.cs
+
+now if we delete payroll.dll then also we can access it using gacutil
+
+del payroll.dll
+
+gacutil /i payroll.dll 
+
+objectaccesstest.exe  (still gets executed thr'u gacutil)
+
+gacutil /u pyroll.dll (to uninstall)

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShopModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ShopModelStoreContainer">
+    <EntitySet Name="Counter" EntityType="ShopModel.Store.Counter" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Customer" EntityType="ShopModel.Store.Customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderDetail" EntityType="ShopModel.Store.OrderDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Product" EntityType="ShopModel.Store.Product" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_OrderDetail_Customer" Association="ShopModel.Store.FK_OrderDetail_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Product" Association="ShopModel.Store.FK_OrderDetail_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Counter">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="CurrentValue" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="Password" Type="nvarchar" MaxLength="8" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="24" />
+    <Property Name="Credit" Type="numeric" Precision="8" Scale="2" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderNo" />
+    </Key>
+    <Property Name="OrderNo" Type="int" Nullable="false" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="CustomerId" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="ProductNo" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductNo" />
+    </Key>
+    <Property Name="ProductNo" Type="int" Nullable="false" />
+    <Property Name="Price" Type="numeric" Nullable="false" Precision="8" Scale="2" />
+    <Property Name="Stock" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_OrderDetail_Customer">
+    <End Role="Customer" Type="ShopModel.Store.Customer" Multiplicity="1" />
+    <End Role="OrderDetail" Type="ShopModel.Store.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_Product">
+    <End Role="Product" Type="ShopModel.Store.Product" Multiplicity="1" />
+    <End Role="OrderDetail" Type="ShopModel.Store.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductNo" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="ProductNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

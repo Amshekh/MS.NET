@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<xs:schema id="ShopDataSet" xmlns="urn:DB" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:codegen="urn:schemas-microsoft-com:xml-msprop">
+  <xs:element name="ShopDataSet" msdata:IsDataSet="true">
+
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+
+        <xs:element name="Product">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductNo" type="xs:integer" />
+              <xs:element name="Price" type="xs:decimal" />
+              <xs:element name="Stock" type="xs:integer" />
+              <xs:element name="Profit" type="xs:decimal" msdata:Expression="0.15*Stock*Price" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:choice>
+    </xs:complexType>
+
+  </xs:element>
+</xs:schema>
+

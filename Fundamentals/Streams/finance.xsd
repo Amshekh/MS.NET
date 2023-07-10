@@ -1,0 +1,19 @@
+<xs:schema id="Loans" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Loans">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Loan" type="LoanInfo" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="LoanInfo">
+    <xs:sequence>
+      <xs:element name="Amount" type="xs:double" />
+      <xs:element name="Period" type="xs:int" />
+    </xs:sequence>
+    <xs:attribute name="Scheme" type="xs:string" />
+  </xs:complexType>
+
+</xs:schema>

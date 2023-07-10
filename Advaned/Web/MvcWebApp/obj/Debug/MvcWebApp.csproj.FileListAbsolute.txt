@@ -1,0 +1,14 @@
+E:\MS.NET\Advaned\Web\MvcWebApp\bin\MvcWebApp.dll
+E:\MS.NET\Advaned\Web\MvcWebApp\bin\MvcWebApp.pdb
+E:\MS.NET\Advaned\Web\MvcWebApp\bin\EntityFramework.dll
+E:\MS.NET\Advaned\Web\MvcWebApp\bin\EntityFramework.xml
+E:\MS.NET\Advaned\Web\MvcWebApp\obj\Debug\ResolveAssemblyReference.cache
+E:\MS.NET\Advaned\Web\MvcWebApp\obj\Debug\MvcWebApp.dll
+E:\MS.NET\Advaned\Web\MvcWebApp\obj\Debug\MvcWebApp.pdb
+D:\Tutorials\study\Amits\ADSD\MS.NET_yw\Advaned\Web\MvcWebApp\bin\MvcWebApp.dll
+D:\Tutorials\study\Amits\ADSD\MS.NET_yw\Advaned\Web\MvcWebApp\bin\MvcWebApp.pdb
+D:\Tutorials\study\Amits\ADSD\MS.NET_yw\Advaned\Web\MvcWebApp\bin\EntityFramework.dll
+D:\Tutorials\study\Amits\ADSD\MS.NET_yw\Advaned\Web\MvcWebApp\bin\EntityFramework.xml
+D:\Tutorials\study\Amits\ADSD\MS.NET_yw\Advaned\Web\MvcWebApp\obj\Debug\ResolveAssemblyReference.cache
+D:\Tutorials\study\Amits\ADSD\MS.NET_yw\Advaned\Web\MvcWebApp\obj\Debug\MvcWebApp.dll
+D:\Tutorials\study\Amits\ADSD\MS.NET_yw\Advaned\Web\MvcWebApp\obj\Debug\MvcWebApp.pdb

@@ -1,0 +1,18 @@
+<script language="C#" runat="server">
+
+	private void Page_Load(object sender, EventArgs e)
+	{
+		nameLabel.Text = Request.QueryString["name"];
+		timeLabel.Text = DateTime.Now.ToString();
+	}
+</script>
+
+<html>
+	<head>
+		<title>Greetings</title>
+	</head>
+	<body>
+		<h1>Welcome Visitor <asp:Label Id="namelabel" runat="server"/></h1>
+		<b>Time on server: </b><asp:Label Id="timeLabel" runat="server"/>
+	</body>
+</html>
